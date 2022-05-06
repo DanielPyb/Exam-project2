@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=|, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Square+Peg&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/mobile-styles.css" />
+    <script src="script/apihome.js" defer></script>
+    <script src="script/nav.js" defer></script>
+    <title>Mithria | Contact</title>
+  </head>
+  <body>
+    <div class="nav-opener">
+      <button id="hamburger-open">Y</button>
+    </div>
+    <nav>
+      <button id="hamburger-close">X</button>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="bloglist.html">Blog</a></li>
+        <li class="active"><a href="contact.html">Contact</a></li>
+      </ul>
+      <p>Mitheria</p>
+    </nav>
+
+    <div class="contact-container">
+      <div class="contact-content">
+        <div class="formgroup">
+          <form class="contact-form">
+            <formgroup>
+              <p class="error" id="name-error">Please enter a name</p>
+              <label for="name">Name</label>
+              <input type="text" id="name" />
+            </formgroup>
+            <formgroup>
+              <p class="error" id="title-error">Please enter a title</p>
+              <label for="title">Title</label>
+              <input type="text" id="title" />
+            </formgroup>
+            <formgroup>
+              <p class="error" id="email-error">please enter a valid email</p>
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" />
+            </formgroup>
+            <formgroup>
+              <label for="message-text">Message</label>
+              <textarea id="message-text"> </textarea>
+              <p class="error" id="message-text-error">
+                We appreciate the help, but need more information
+              </p>
+            </formgroup>
+            <formgroup id="form-btn-hndlr">
+                <button type="submit" id="form-btn">Send in</button>
+              </formgroup>
+          </form>
+        </div>
+        <div class="contact-success">
+          <h3>Thank you for your help</h3>
+          <p>Hopefully with your help we can find William</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-info">
+        <p>Created by Daniel for Noroff</p>
+      </div>
+      <div class="footer-cool">
+        <p>Socials</p>
+        <ul>
+          <li>GitHub</li>
+          <li>LinkedIn</li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
