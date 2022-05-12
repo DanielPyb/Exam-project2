@@ -67,7 +67,7 @@ async function getBlog(url) {
     images.forEach((image) => image.addEventListener("click", openModal));
     modal.addEventListener("click", closeModal);
 
-    document.title = "Mithria | " + response.title.rendered;
+    document.title = "Mitheria | " + response.title.rendered;
   } catch (error) {
     console.log(error);
   }
