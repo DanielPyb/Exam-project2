@@ -11,16 +11,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/mobile-styles.css" />
-    <script src="script/apihome.js" defer></script>
+    <script src="script/validation.js" defer></script>
     <script src="script/nav.js" defer></script>
     <title>Mithria | Contact</title>
   </head>
   <body>
     <div class="nav-opener">
-      <button id="hamburger-open">Y</button>
+      <p id="hamburger-open"><img src="images/icons/open.png"></p>
     </div>
     <nav>
-      <button id="hamburger-close">X</button>
+      <p id="hamburger-close"><img src="images/icons/x.png"></p>
       <ul>
         <li><a href="home.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -50,9 +50,9 @@
               <input type="email" id="contact-email" />
             </formgroup>
             <formgroup>
-              <label for="message-text">Message</label>
-              <textarea id="message-text"> </textarea>
-              <p class="error" id="message-text-error">
+              <label for="message">Message</label>
+              <textarea id="message"> </textarea>
+              <p class="error" id="message-error">
                 We appreciate the help, but need more information
               </p>
             </formgroup>
@@ -69,15 +69,26 @@
     </div>
 
     <footer>
-      <div class="footer-info">
-        <p>Created by Daniel for Noroff</p>
-      </div>
-      <div class="footer-cool">
-        <p>Socials</p>
-        <ul>
-          <li>GitHub</li>
-          <li>LinkedIn</li>
-        </ul>
+      <div class="footer-content">
+        <div class="footer-info">
+          <p>Created by Daniel for Noroff</p>
+        </div>
+        <div class="footer-nav">
+          <p>Menu</p>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="bloglist.html">Blog</a></li>
+            <li  class="active"><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-cool">
+          <p>Socials</p>
+          <ul>
+            <li>GitHub</li>
+            <li>LinkedIn</li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>

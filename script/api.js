@@ -24,7 +24,7 @@ async function apiCall(url) {
     response.forEach((post) => {
       if (blogID == post.id) {
         //showing what the blog that is currently active is
-        blogList.innerHTML += `<a href="blog.html?id=${post.id}"><li class="active">${post.title.rendered}</li></a>`;
+        blogList.innerHTML += `<a href="blog.html?id=${post.id}"><li class="active underline">${post.title.rendered}</li></a>`;
       } else {
         blogList.innerHTML += `<a href="blog.html?id=${post.id}"><li>${post.title.rendered}</li></a>`;
       }
@@ -75,5 +75,3 @@ async function getBlog(url) {
 
 apiCall(apiURL);
 getBlog(singleBlog);
-
-//Preparing Modals in the blog

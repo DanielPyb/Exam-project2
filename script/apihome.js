@@ -13,8 +13,8 @@ async function apiCall(url){
         blogList.innerHTML +=
         `<a href="blog.html?id=${post.id}">
         <div class="home-blog">
-            <img src="images/blogImg.jpg" />
-                <div class="blog-text">
+            <img src="images/blogImg.jpg" alt="A background with JS code and pictures of William and Elias in front of it"/>
+                <div class="home-blog-text">
                 <h2>${post.title.rendered}</h2>
             <p>By Elias</p>
         </div>

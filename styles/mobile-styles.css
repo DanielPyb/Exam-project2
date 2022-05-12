@@ -12,6 +12,15 @@ body{
 a{
     text-decoration: none;
 }
+
+h2::after{
+    content: '';
+    background-color: white;
+    width: 30px;
+    height: 3px;
+    display: block;
+}
+
 .underline{
     text-decoration: underline;
 }
@@ -25,6 +34,7 @@ a{
     left: 80%;
     display: block;
 }
+
 
 /*Interactivity*/
 
@@ -52,9 +62,7 @@ nav {
     left: 80%;
 }
 
-nav p{
-    display: none;
-}
+
 
 nav ul{
     padding-left: 0;
@@ -75,23 +83,39 @@ nav ul li{
 
     /* Footer */
 footer{
-    background-image: url("images/HeroImage.jpg");
+    background-color: #c58722;
+}
+.footer-content{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: #c58722;
     padding-top: 4rem;
     padding-bottom: 4rem ;
-    text-align: center;
+    width: 90%;
+    margin: 0 auto;
     }
     
-.footer-cool ul{
+footer ul{
     list-style-type: none;
     padding-left: 0;
     }
-.footer-cool p{
+footer p{
     padding-bottom: 1rem;
+    font-size: 1.5rem;
 }
-    
+footer p::after{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #2F4858;
+}
+
+footer a{
+    color: white;
+}
+.footer-nav{
+    display: none;
+}   
 
                                                     /* HOME */
             /*HERO IMAGE*/
@@ -209,7 +233,7 @@ footer{
 }
 
 .contact-content{
-    width: 50%;
+    width: 90%;
     margin: 0 auto;
     padding-top: 5rem;
     text-align: center;
@@ -226,6 +250,7 @@ formgroup label{
 
 .error{
     display: none;
+    color: #c58722;
 }
 
 #form-btn-hndlr button{
@@ -240,6 +265,11 @@ formgroup label{
 
 #form-btn-hndlr button:hover{
     border: 2px solid white;
+}
+
+textarea{
+    width: 400px;
+    height: 300px;
 }
 
 .contact-success{
@@ -269,9 +299,9 @@ formgroup label{
 
 .blog-text{
     position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, 0%);
+    top: 50%;
+    left: 36%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 .blog-text p{
@@ -306,7 +336,7 @@ formgroup label{
     color: white;
 }
 .mainblog-content{
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
     padding-bottom: 6rem;
 }
@@ -343,7 +373,7 @@ formgroup label{
 
 .mainblog-modal-content img{
     max-width: 100%;
-    max-height: 100%;
+    height: auto;
 }
 
 .mainblog-modal-content{
@@ -357,11 +387,11 @@ formgroup label{
 
 @media screen and (min-width: 950px) {
 
-                                                                            /*Interactivty*/
+                                                                            /*Interactivty 950*/
     .active {
         font-size: 1.2rem;
     }
-                                                                            /*Nav*/
+                                                                            /*Nav 950*/
     nav {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -394,6 +424,13 @@ formgroup label{
         display: none;
     }
 
+                                                                            /*Footer 950*/
+    .footer-content{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .footer-nav{
+        display: block;
+    }
                                                                             /*HOME 950*/
     .hero-text{
         top: 40%;
@@ -436,9 +473,9 @@ formgroup label{
     
     .home-blog-text{
         position: absolute;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, 0%);
+        top: 50%;
+        left: 36%;
+        transform: translate(-50%, -50%);
         text-align: center;
     }
     .home-blog-text p{
@@ -461,14 +498,18 @@ formgroup label{
     }
     
             /* Explorer */
-    .meet-explorer{
+    .explorer-container{
         background-color: #2F4858;
         padding-top: 4rem;
         padding-bottom: 4rem;
+    }
+    .meet-explorer{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 1.5rem;
         align-items: center;
+        width: 80%;
+        margin: 0 auto;
     }
 
     .explorer-image img{
@@ -601,7 +642,6 @@ formgroup label{
     .blog-list{
         grid-template-columns: 1fr 1fr 1fr;
     }
-
                                                                         /*Blog 1600*/
 
     .mainblog-content figure img{
