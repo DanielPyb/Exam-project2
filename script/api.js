@@ -20,6 +20,8 @@ async function apiCall(url) {
   try {
     const result = await fetch(url);
     const response = await result.json();
+    response.reverse();
+    
 
     response.forEach((post) => {
       if (blogID == post.id) {
@@ -29,7 +31,7 @@ async function apiCall(url) {
         blogList.innerHTML += `<a href="blog.html?id=${post.id}"><li>${post.title.rendered}</li></a>`;
       }
     });
-  } catch {
+  } catch(error) {
     console.log(error);
   }
 }
@@ -44,16 +46,20 @@ async function getBlog(url) {
         <h1>${response.title.rendered}</h1>
         <p>${response.content.rendered}</p>
         `;
+    //creating a div to append the next and previous buttons to
+    const nextPrev = document.createElement("div");
+    nextPrev.classList.add("next-prev");
     if (response.id != 6) {
-      blogContent.innerHTML += `<p class="underline"><a href="blog.html?id=${response.previous.id}">Prev</a></p>`;
+      nextPrev.innerHTML += `<p class="blog-line"><a href="blog.html?id=${response.previous.id}">Prev</a></p>`;
     } else if(response.next.id){}
     if (response.id != 33) {
-      blogContent.innerHTML += `<p class="underline"><a href="blog.html?id=${response.next.id}">Next</a></p>`;
+      nextPrev.innerHTML += `<p class="blog-line"><a href="blog.html?id=${response.next.id}">Next</a></p>`;
     }
-    //if there are images in the blog post this will grab the images into a
-    const images = document.querySelectorAll("img");
+    blogContent.append(nextPrev);
+    //if there are images in the blog post this will grab the images into an array. OBS using the blogcontent instead of document because of a bug with document(grabbing the icons as a modal)
+    const images = blogContent.querySelectorAll("img");
 
-    // functoon that opens the modals if the image is clicked this will also chose the selected Image through the event
+    // function that opens the modals if the image is clicked this will also chose the selected Image through the event
     function openModal(e) {
       modal.style.display = "flex";
       modalContent.innerHTML = `${e.target.outerHTML}`;

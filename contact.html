@@ -32,37 +32,41 @@
 
     <div class="contact-container">
       <div class="contact-content">
+        <div class="contact-info">
+          <h2>Contact us</h2>
+          <p>If you know anything about William we would appreciate any sort of help in finding him, or his body.</p>
+        </div>
         <div class="formgroup">
           <form class="contact-form">
-            <formgroup>
-              <p class="error" id="name-error">Please enter a name</p>
+            <formgroup class="grid-a grid-base">
               <label for="name">Name</label>
               <input type="text" id="name" />
+              <p class="error" id="name-error">Please enter a name</p>
             </formgroup>
-            <formgroup>
-              <p class="error" id="title-error">Please enter a title</p>
+            <formgroup class="grid-b grid-base">
               <label for="title">Title</label>
               <input type="text" id="title" />
+              <p class="error" id="title-error">Please enter a title</p>
             </formgroup>
-            <formgroup>
-              <p class="error" id="email-error">please enter a valid email</p>
+            <formgroup class="grid-c grid-base">
               <label for="contact-email">Email</label>
               <input type="email" id="contact-email" />
+              <p class="error" id="email-error">please enter a valid email</p>
             </formgroup>
-            <formgroup>
+            <formgroup class="grid-d grid-base">
               <label for="message">Message</label>
               <textarea id="message"> </textarea>
               <p class="error" id="message-error">
                 We appreciate the help, but need more information
               </p>
             </formgroup>
-            <formgroup id="form-btn-hndlr">
+            <formgroup id="form-btn-hndlr" class="grid-e">
                 <button type="submit" id="form-btn">Send in</button>
               </formgroup>
           </form>
         </div>
         <div class="contact-success">
-          <h3>Thank you for your help</h3>
+          <h2>Thank you for your help</h2>
           <p>Hopefully with your help we can find William</p>
         </div>
       </div>

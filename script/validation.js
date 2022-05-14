@@ -9,7 +9,7 @@ const message = document.querySelector("#message")
 const nameError = document.querySelector("#name-error");
 const titleError = document.querySelector("#title-error")
 const messageError = document.querySelector("#message-error");
-const contactSuccess = document.querySelector(".contact-success");
+const contactSuccess = document.querySelector("contact-success");
 const emailError = document.querySelector("#email-error")
 
 function emailValidation(email){

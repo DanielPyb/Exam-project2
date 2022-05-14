@@ -38,17 +38,20 @@ apiCall(apiURL);
 
 //Page changes
 function pageForward(){
+    if(pagenumber == 1){
     pagenumber++;
     const newUrl  = "https://kodeblokk.com/exam_semester2/wp-json/wp/v2/posts?page=" + pagenumber;
     blogList.innerHTML = "";
-    apiCall(newUrl);
+    apiCall(newUrl);}
 }
 
 function pageBackward(){
+    if (pagenumber == 2){
     pagenumber--;
     const newUrl  = "https://kodeblokk.com/exam_semester2/wp-json/wp/v2/posts?page=" + pagenumber;
     blogList.innerHTML = "";
     apiCall(newUrl);
+    }
 }
 
 forwardBTN.addEventListener("click", pageForward);
