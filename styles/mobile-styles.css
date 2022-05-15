@@ -43,7 +43,6 @@ h2 {
     height: 3px;
     display: block;
 }
-
 .blog-line::after{
     content: '';
     background-color: var(--orange);
@@ -314,7 +313,7 @@ formgroup label{
 
 .error{
     display: none;
-    color: #c58722;
+    color: #d43737;
 }
 
 #form-btn-hndlr button{
@@ -643,13 +642,19 @@ formgroup label{
         grid-gap: 2rem;
     }
                                                                         /*Contact 950*/
-    .contact-content{
+    
+    .contact-container{
         padding-top: 8rem;
+    }
+    .contact-content{
+        padding: 5rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
         width: 50%;
         margin: 0 auto;
         grid-gap: 2rem;
+        background-color: var(--dark-blue);
+        border-radius: 8px;
     }
     .contact-info{
         display: flex;
@@ -712,7 +717,7 @@ formgroup label{
         .blog-info{
             text-align: center;
             position: fixed;
-            right: 5%;
+            right: 15%;
             top: 40%;
         }
         .section-list ul{
@@ -801,11 +806,11 @@ formgroup label{
     .blog-container{
         grid-template-columns: 5fr 1fr;
     }
-    .blog-list{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
     .blog-list-content{
-        width: 70%;
+        width: 50%;
+    }
+    .blog-info{
+        right: 25%;
     }
                                                                         /*Blog 1600*/
 
