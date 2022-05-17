@@ -14,6 +14,7 @@ async function apiCall(url){
     const result = await fetch(url);
     const response = await result.json();
 
+    blogList.innerHTML = "";
     response.forEach(post =>{
         blogList.innerHTML +=
         `<a href="blog.html?id=${post.id}">
@@ -41,7 +42,12 @@ function pageForward(){
     if(pagenumber == 1){
     pagenumber++;
     const newUrl  = "https://kodeblokk.com/exam_semester2/wp-json/wp/v2/posts?page=" + pagenumber;
-    blogList.innerHTML = "";
+    blogList.innerHTML = `            <div class="loading">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>`;
     apiCall(newUrl);}
 }
 
@@ -49,7 +55,12 @@ function pageBackward(){
     if (pagenumber == 2){
     pagenumber--;
     const newUrl  = "https://kodeblokk.com/exam_semester2/wp-json/wp/v2/posts?page=" + pagenumber;
-    blogList.innerHTML = "";
+    blogList.innerHTML = `            <div class="loading">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>`;
     apiCall(newUrl);
     }
 }

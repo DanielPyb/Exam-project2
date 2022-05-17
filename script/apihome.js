@@ -9,6 +9,7 @@ async function apiCall(url){
     const result = await fetch(url);
     const response = await result.json();
 
+    blogList.innerHTML = '';
     response.forEach(post =>{
         blogList.innerHTML +=
         `<a href="blog.html?id=${post.id}">

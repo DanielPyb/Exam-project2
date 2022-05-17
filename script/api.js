@@ -22,7 +22,7 @@ async function apiCall(url) {
     const response = await result.json();
     response.reverse();
     
-
+    blogList.innerHTML = '';
     response.forEach((post) => {
       if (blogID == post.id) {
         //showing what the blog that is currently active is
@@ -41,7 +41,7 @@ async function getBlog(url) {
   try {
     const result = await fetch(url);
     const response = await result.json();
-
+    blogContent.innerHTML = '';
     blogContent.innerHTML = `
         <h1>${response.title.rendered}</h1>
         <p>${response.content.rendered}</p>
