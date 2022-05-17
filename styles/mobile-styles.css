@@ -31,9 +31,14 @@ h2::after{
     height: 3px;
     display: block;
 }
+h1{
+    font-family: 'Audiowide', cursive;
+}
 
 h2 {
     padding-bottom: 1rem;
+    font-family: 'Audiowide', cursive;
+    letter-spacing: .1rem;
 }
 
 .underline::after{
@@ -107,6 +112,7 @@ nav {
 
 nav p{
     display: none;
+    font-family: 'Audiowide', cursive;
 }
 
 #hamburger-close{
@@ -197,7 +203,7 @@ footer a{
 .hero-text h1{
     font-size: 3rem;
     text-align: center;
-    font-family: 'Square Peg', cursive;
+    font-family: 'Audiowide', cursive;
 }
 
 .hero-action{
@@ -267,6 +273,9 @@ footer a{
 .about-container h1{
     text-align: center;
     padding-top: 2rem;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    font-family: 'Audiowide', cursive;
 }
 .about-content{
     width: 80%;
@@ -418,6 +427,7 @@ formgroup label{
     text-align: center;
     padding-top: 8rem;
     margin-bottom: 2rem;
+    letter-spacing: .1rem;
 }
 .mainblog-content h1::after{
     content: '';
